@@ -23,7 +23,7 @@ export class HeaderComponent implements OnInit,AfterViewInit {
   HeaderStyle(){
     var scrollActual = window.scrollY;
     var header = document.getElementById('header');
-    if (scrollActual > 1) {
+    if (scrollActual > 50) {
       
       if (scrollActual > this.SIguienteScroll) {
         header?.classList.add('header_esconder');

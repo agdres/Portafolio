@@ -1,0 +1,83 @@
+//************** Generales *******************
+.footer{
+    display: flex;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    justify-content: center;
+    font-family: var(--font--family);
+    &_option{
+        text-align: center;
+        margin-bottom: 1rem;
+        &:nth-child(1){
+            animation-name: bottAnimacion;
+            animation-duration: 1.5s;
+            width: 20rem;
+            // background-color: aqua;
+        }
+        &:nth-child(2){
+            width: 20rem;
+            animation-name: bottAnimacion;
+            animation-duration: 2.5s;
+            // background-color: rgb(44, 0, 85);
+        }
+        &:nth-child(3){
+            width: 20rem;
+            animation-name: bottAnimacion;
+            animation-duration: 3.5s;
+            // background-color: rgb(250, 16, 172);
+        }
+        &:nth-child(4){
+            animation-name: bottAnimacion;
+            animation-duration: 4.5s;
+            width: 15rem;
+            // background-color: rgb(43, 255, 0);
+        }
+        h4{
+            font-weight: bold;
+        }
+        span{
+            font-size: .9rem;
+            width: 5rem;
+        }
+    }
+}
+//********************************************
+
+
+// Escritorios
+@media screen and (min-width: 1024px) {}
+
+// telefono
+@media screen and (min-width: 768px) and (max-width: 1190px) {}
+
+
+//movil horizontal
+@media screen and (max-width: 767px) {
+    .row {
+        --bs-gutter-x: 0 !important;
+    }
+
+}
+
+//movil vertical
+@media (max-width: 480px) {}
+
+
+
+// Animaciones
+// animation-name: bottAnimacion;
+// animation-duration: 1.5s;
+@keyframes bottAnimacion{
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
