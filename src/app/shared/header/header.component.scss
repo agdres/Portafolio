@@ -13,7 +13,7 @@
   .header_mostrar {
     position: fixed !important;
     top: 0;
-    height: 16% !important;
+    height: 18% !important;
     transition: all .4s;
     border-bottom: 1px solid #FD8A5C;
     .header_menu {
@@ -40,6 +40,8 @@
       --bs-gutter-x: 0 !important;
     }
     .header{
+        animation-name: topAnimacion;
+        animation-duration: 1s;
         height: 15%;
         transition: all .5s;
         position: relative;
@@ -80,3 +82,18 @@
    
 }
 
+
+// Animaciones movile
+// animation-name: topAnimacion;
+// animation-duration: 1.5s;
+@keyframes topAnimacion{
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
