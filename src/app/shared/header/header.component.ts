@@ -19,49 +19,22 @@ export class HeaderComponent implements OnInit,AfterViewInit {
   }
 
   // Modifica el estilo del header segun el scroll 
+  private SIguienteScroll = 0;
   HeaderStyle(){
-    var scrollActual = document.documentElement.scrollTop;
-    var SIguienteScroll = 0;
-    console.log(scroll);
-
+    var scrollActual = window.scrollY;
     var header = document.getElementById('header');
-    
     if (scrollActual > 1) {
-      if (scrollActual > SIguienteScroll) {
-        header?.classList.remove('header--scroll-down');
-        header?.classList.add('header--scroll-up');
+      
+      if (scrollActual > this.SIguienteScroll) {
+        header?.classList.add('header_esconder');
+        header?.classList.remove('header_mostrar');
       } else {
-        header?.classList.add('header--scroll-down');
-        header?.classList.remove('header--scroll-up');
+        header?.classList.remove('header_esconder');
+        header?.classList.add('header_mostrar');
       }
-
-      SIguienteScroll = scrollActual;
+      this.SIguienteScroll = scrollActual;
     } else {
-      header?.classList.remove('header--scroll-up');
+        header?.classList.remove('header_mostrar');
     }
   }
-
-  // Otro(){
-  //   const header = document.getElementById('header');
-  //     var lastScrollY = 0;
-
-  //     var currentScrollY = document.documentElement.scrollTop;
-  //     console.log(currentScrollY);
-    
-  //     if (currentScrollY > 1) {
-  //       if (currentScrollY > lastScrollY) {
-  //         header?.classList.remove('header--scroll-down');
-  //         header?.classList.add('header--scroll-up');
-  //       } else {
-  //         header?.classList.add('header--scroll-down');
-  //         header?.classList.remove('header--scroll-up');
-  //       }
-
-  //         lastScrollY = currentScrollY;
-  //     } else {
-  //       header?.classList.remove('header--scroll-up');
-  //       //header?.classList.remove('header--scroll-down');
-
-  //     }
-  // }
 }

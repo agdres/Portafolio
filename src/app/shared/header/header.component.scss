@@ -4,7 +4,23 @@
     width: 100% !important;
 }
 
-
+//**************** Scroll Header *******************//
+.header_esconder{
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: all .5s;
+  }
+  .header_mostrar {
+    position: fixed !important;
+    top: 0;
+    height: 16% !important;
+    transition: all .4s;
+    border-bottom: 1px solid #FD8A5C;
+    .header_menu {
+        margin-top: -1.8rem !important;
+    }
+  }
+//***************************************************//
 
 
 // Escritorios
@@ -17,28 +33,12 @@
 
 }
 
-.header--scroll-down {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  .header--scroll-up {
-    transition: all .5s;
-    position: sticky !important;
-    top: 0 !important;
-    height: 5.5rem !important;
-    opacity: 1;
-    padding-top: 0 !important;
-
-    .header{
-        &_encabezado{
-            display: none;
-            transition: all .5s;
-        }
-    }
-  }
 
 //movil horizontal
 @media screen and (max-width: 767px) {
+    .row {
+      --bs-gutter-x: 0 !important;
+    }
     .header{
         height: 15%;
         transition: all .5s;
@@ -80,117 +80,3 @@
    
 }
 
-
-
-//Animaciones
-
-// @keyframes topslide {
-//     from {transform: translateY(-700px); overflow: hidden !important;}
-//     to {transform: translateY(0px); overflow: hidden !important;}
-//   }
-  
-//   @keyframes bottonslide {
-    
-//     from {
-//         transform: translateY(250px); 
-//         overflow: hidden !important;
-
-//     }
-//     to {
-//         transform: translateY(0px); 
-//         overflow: hidden !important;
-//     }
-//   }
-
-
-/*
-    ** Body main style
-*/
-// body {
-//   line-height: 1.317101995;
-//   scroll-behavior: smooth;
-//   font-family: sans-serif;
-//   background-color: #ffffff;
-// }
-
-// button:focus {
-//   outline: 0;
-// }
-
-// body {
-//   background-color: #222222;
-//   font-family: "Roboto", sans-serif;
-//   min-height: 200vh;
-// }
-
-// .header {
-//   height: 132px;
-//   width: 100%;
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   transition: all 400ms;
-// }
-// .header .main-logo {
-//   width: 160px;
-//   transition: all 200ms;
-// }
-// .header--scroll-down {
-//   transform: translateY(-100%);
-//   opacity: 0;
-// }
-// .header--scroll-up {
-//   top: 0;
-//   background-color: #222222;
-//   height: 90px;
-//   opacity: 1;
-//   border-bottom: 1px solid #FD8A5C;
-// }
-// .header--scroll-up .main-logo {
-//   width: 120px;
-// }
-
-// .header-wrapper {
-//   width: 100%;
-//   max-width: 1200px;
-//   height: 100%;
-//   margin: 0 auto;
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-// }
-
-// .nav-list {
-//   display: flex;
-//   list-style: none;
-// }
-// .nav-list-item {
-//   margin: 0 24px;
-// }
-
-// .nav-link {
-//   color: #fff;
-//   text-decoration: none;
-//   font-size: 18px;
-//   font-weight: 100;
-//   transition: all 100ms;
-// }
-// .nav-link:hover {
-//   color: #FD8A5C;
-// }
-
-// .banner-home {
-//   width: 100%;
-//   height: 100vh;
-//   background-position: center;
-//   background-size: cover;
-//   background-repeat: no-repeat;
-// }
-
-// .for-example {
-//   width: 100%;
-//   max-width: 1200px;
-//   margin: 0 auto;
-//   color: #fff;
-//   padding-top: 80px;
-// }
