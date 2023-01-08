@@ -45,16 +45,17 @@ export class CurriculumComponent implements OnInit {
           {
             tiempo: 'Ene 2018 - Nov 2019',
             titulo: 'Técnico en contabilización de operaciones comerciales y financieras.'
-         }
-          ,
-          {
-            tiempo: 'Ene 2018 - Nov 2019',
-            titulo: 'Técnico en contabilización de operaciones comerciales y financieras.'
           }
-          ,
+        ]
+    },
+    {
+      logo: 'assets/images/Logos/Bachiller.png',
+      institucion: 'COLMERCEDES',
+      detalles:
+        [
           {
-            tiempo: 'Ene 2018 - Nov 2019',
-            titulo: 'Técnico en contabilización de operaciones comerciales y financieras.'
+            tiempo: 'Nov 2019',
+            titulo: 'Bachillerato académico.'
           }
         ]
     }
