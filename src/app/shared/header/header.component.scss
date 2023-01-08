@@ -49,10 +49,13 @@
         font-family: var(--font--family);
         color: var(--color--text--primary);
         &_encabezado{
-            cursor: pointer;
             font-weight: 500;
             font-size: 1.5rem;
+            span{
+                cursor: pointer;
+            }
             h4{
+                cursor: default;
                 margin-top: .5rem;
             }
         }
