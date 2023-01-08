@@ -1,0 +1,38 @@
+main{
+    width: 100%;
+    // height: 75vh;
+    font-family: var(--font--family);
+}
+
+// Escritorios
+@media screen and (min-width: 1024px) {}
+
+// telefono
+@media screen and (min-width: 768px) and (max-width: 1190px) {}
+
+//movil horizontal
+@media screen and (max-width: 767px) {
+    .row {
+        --bs-gutter-x: 0 !important;
+    }
+}
+
+//movil vertical
+@media (max-width: 480px) {}
+
+
+
+// Animaciones
+// animation-name: leftAnimacion;
+// animation-duration: 1.5s;
+@keyframes leftAnimacion{
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
