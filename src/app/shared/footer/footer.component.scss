@@ -4,8 +4,6 @@
     padding-left: .5rem;
     padding-right: .5rem;
     width: 100%;
-    position: absolute;
-    bottom: 0;
     justify-content: center;
     font-family: var(--font--family);
     &_option{
@@ -14,11 +12,11 @@
         &:nth-child(1){
             animation-name: bottAnimacion;
             animation-duration: 1.5s;
-            width: 20rem;
+            width: 500px;
             // background-color: aqua;
         }
         &:nth-child(2){
-            width: 20rem;
+            width: 250px;
             animation-name: bottAnimacion;
             animation-duration: 2.5s;
             // background-color: rgb(44, 0, 85);

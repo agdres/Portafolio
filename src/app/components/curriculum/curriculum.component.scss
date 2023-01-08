@@ -1,0 +1,152 @@
+//************** Generales *******************
+main{
+    width: 100%;
+    padding-top: 4rem;
+    font-family: var(--font--family);
+}
+
+.timepo_linea{
+
+}
+//********************************************
+
+//****** Linea del tiempo ******//
+ul {
+    position:relative;
+  }
+  
+ul li{
+    list-style-type: none;
+}
+  
+// Estilos del lado derecho de la linea
+ul li {
+position:relative;  
+padding-left: 1rem;
+}
+  
+// Puntos por Li
+ul li::after {
+    content:'';
+    display:block;
+    margin-top: .5rem;
+    width:8px;
+    height:8px;
+    border: solid 2px var(--color--background-options);
+    background-color:var(--color--background-options);
+    position:absolute;
+    top: 0;
+    left: -0.9rem;
+    border-radius:50%;  
+}
+ 
+ul li:last-child::before{
+    content: none;
+}
+// Lineas
+  ul li::before {
+    content:'';
+    display: block;
+    width: 2px;
+    margin-top: 1.5rem;
+    height: 90%;
+    background-color: var(--color--background-second);
+    position:absolute;
+    top:0;
+    left: -0.7rem; 
+  }
+  
+//
+
+
+// Escritorios
+@media screen and (min-width: 1024px) {}
+
+// telefono
+@media screen and (min-width: 768px) and (max-width: 1190px) {}
+
+
+//movil horizontal
+@media screen and (max-width: 767px) {
+    .row {
+        --bs-gutter-x: 0 !important;
+    }
+
+    .main{
+        display: flex;
+        justify-content: center;
+        &_ex{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: self-end;
+            h3{
+                font-size: 1.8rem;
+                font-weight: 400;
+                letter-spacing: .2rem;
+                position: absolute;
+                left: 3rem;
+            }
+            &_cont{
+                width: 80%;
+                margin-top: 4.5rem;
+                display: flex;
+                flex-direction: column;
+                &_img{
+                    position: relative;
+                    margin-bottom: 1.5rem;
+                    img{
+                        width: 2.5rem;
+                        height: 2.5rem;
+                        border-radius: 50%;
+                        box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+                    }
+                    h5{
+                        position: absolute;
+                        top: 0.7rem;
+                        left: 3rem;
+                        text-align: justify;
+                        font-size: .98rem;
+                        font-weight: 400;
+                        font-weight: 500;
+                    }
+                }
+
+                &_list{
+                    li{
+                        h4{
+                            font-weight: 500;
+                        }
+                        h5{
+                            margin-top: -1rem;
+                        }
+                        p{
+                            text-align: justify;
+                            width: 90%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//movil vertical
+@media (max-width: 480px) {}
+
+
+
+// Animaciones
+// animation-name: bottAnimacion;
+// animation-duration: 1.5s;
+@keyframes bottAnimacion{
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}

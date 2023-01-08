@@ -11,7 +11,7 @@ export class HeaderComponent implements OnInit,AfterViewInit {
     this.HeaderStyle();
   } 
   ngOnInit(): void {
-   
+
   }
 
   ngAfterViewInit(): void {
@@ -19,22 +19,31 @@ export class HeaderComponent implements OnInit,AfterViewInit {
   }
 
   // Modifica el estilo del header segun el scroll 
-  private SIguienteScroll = 0;
+  private SIguienteScroll = 1;
   HeaderStyle(){
     var scrollActual = window.scrollY;
     var header = document.getElementById('header');
-    if (scrollActual > 50) {
+    console.log(scrollActual);
+    
+    if (scrollActual > 0) {
+      console.log("Actual: "+scrollActual);
+      console.log("Siguiente: "+this.SIguienteScroll);
       
       if (scrollActual > this.SIguienteScroll) {
         header?.classList.add('header_esconder');
+      } 
+      else if (scrollActual > this.SIguienteScroll){
         header?.classList.remove('header_mostrar');
-      } else {
+        header?.classList.remove('header_esconder');
+      }
+      else {
         header?.classList.remove('header_esconder');
         header?.classList.add('header_mostrar');
       }
       this.SIguienteScroll = scrollActual;
     } else {
         header?.classList.remove('header_mostrar');
+        document.documentElement.scrollTop = 0;
     }
   }
 }

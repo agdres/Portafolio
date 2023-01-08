@@ -1,5 +1,11 @@
 export interface Curriculum{
     tiempo : string;
-    empresa: string;
+    cargo: string;
     descripcion : string;
+}
+
+export interface Experiencia{
+    logo : string;
+    empresa : string;
+    detalles : Curriculum[];
 }

@@ -1,17 +1,21 @@
 <main class="main">
-
+<!-- <h1 class="text-center">Currículum</h1> -->
     <!-- Bloque experiencia -->
-    <div class="main_experiencia">
-        <div class="main_experiencia_titulos">
-
-        </div>
-        <div class="main_experiencia_contenido">
-            <ng-container>
-                <section>
-                    
-                </section>
-            </ng-container>
-        </div>
+    <div class="main_ex">
+        <h3>Experiencia laboral</h3>
+        <section class="main_ex_cont" *ngFor="let curri of ListCurriculum">
+            <div class="main_ex_cont_img">
+                <img [src]="curri.logo" alt="">
+                <h5>{{curri.empresa}}</h5>
+            </div>
+            <ul class="main_ex_cont_list">
+                <li *ngFor="let destalles of curri.detalles">
+                    <h4>{{destalles.cargo}}</h4>
+                    <h5>{{destalles.tiempo}}</h5>
+                    <p>{{destalles.descripcion}}</p>
+                </li>
+            </ul>
+        </section>
     </div>
 
 </main>
