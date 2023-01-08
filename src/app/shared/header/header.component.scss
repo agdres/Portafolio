@@ -110,8 +110,9 @@
 // animation-name: topAnimacion;
 // animation-duration: 1.5s;
 @keyframes topAnimacion{
+    
     from {
-        transform: translateY(-100px);
+        transform: translateY(-50px);
         opacity: 0;
     }
     

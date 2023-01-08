@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Curriculum, Experiencia } from 'src/app/models/curriculum.model';
+import { Educacion } from 'src/app/models/educacion.model';
 
 @Component({
   selector: 'app-curriculum',
@@ -10,39 +11,18 @@ export class CurriculumComponent implements OnInit {
   public ListCurriculum: Experiencia[] = [
     {
       logo: 'assets/images/Logos/Syscom1.jpg',
-      empresa: 'SISTEMAS COMERCIALES SYSCOM S.A',
+      empresa: 'SISTEMAS COMERCIALES SYSCOM S.A.',
       detalles:
         [
           {
             tiempo: 'Oct 2022 - Actual',
             cargo: 'Programador - Analista',
             descripcion:
-              `Actualmente me encuento laborando como programador full-stack, realizando diversos desarrollos segun requerimientos de la empresa
-          estos varian desde nuevos dearrollos, implementaciones, apoyo en arrelos a proyectos antiguos y en implementacion de nuevos modulos a otros proyectos.`
+              `Actualmente me encuentro laborando como programador full-stack, realizando diversos desarrollos según requerimientos de la empresa
+          estos varían desde nuevos desarrollos, implementaciones, apoyo en arreglos a proyectos antiguos y en implementación de nuevos módulos a otros proyectos.`
           },
           {
-            tiempo: 'Abr 2022 - Sep 2022 (6 Meses)',
-            cargo: 'Aprendiz - Programador',
-            descripcion:
-              `A cargo de la reestructuración de un sistema de facturación electrónica cumpliendo con los estándares de la DIAN,
-          apoyo a mantenimiento de aplicaciones, cumpliendo funcionalidades como analista, definición de base de datos, programador front-end y back-end.`
-          }
-        ]
-    },
-    {
-      logo: 'assets/images/Logos/Syscom1.jpg',
-      empresa: 'SISTEMAS COMERCIALES SYSCOM S.A',
-      detalles:
-        [
-          {
-            tiempo: 'Oct 2022 - Actual',
-            cargo: 'Programador - Analista',
-            descripcion:
-              `Actualmente me encuento laborando como programador full-stack, realizando diversos desarrollos segun requerimientos de la empresa
-          estos varian desde nuevos dearrollos, implementaciones, apoyo en arrelos a proyectos antiguos y en implementacion de nuevos modulos a otros proyectos.`
-          },
-          {
-            tiempo: 'Abr 2022 - Sep 2022 (6 Meses)',
+            tiempo: 'Abr 2022 - Sept 2022 (6 Meses)',
             cargo: 'Aprendiz - Programador',
             descripcion:
               `A cargo de la reestructuración de un sistema de facturación electrónica cumpliendo con los estándares de la DIAN,
@@ -50,25 +30,31 @@ export class CurriculumComponent implements OnInit {
           }
         ]
     }
-    ,
+  ];
+
+  public ListEducacion: Educacion[] = [
     {
-      logo: 'assets/images/Logos/Syscom1.jpg',
-      empresa: 'SISTEMAS COMERCIALES SYSCOM S.A',
+      logo: 'assets/images/Logos/SENA.jpg',
+      institucion: 'Servicio Nacional de Aprendizaje (SENA)',
       detalles:
         [
           {
-            tiempo: 'Oct 2022 - Actual',
-            cargo: 'Programador - Analista',
-            descripcion:
-              `Actualmente me encuento laborando como programador full-stack, realizando diversos desarrollos segun requerimientos de la empresa
-          estos varian desde nuevos dearrollos, implementaciones, apoyo en arrelos a proyectos antiguos y en implementacion de nuevos modulos a otros proyectos.`
+            tiempo: 'Oct 2020 - Sept 2022',
+            titulo: 'Tecnólogo en análisis y desarrollo de sistemas de información.'
           },
           {
-            tiempo: 'Abr 2022 - Sep 2022 (6 Meses)',
-            cargo: 'Aprendiz - Programador',
-            descripcion:
-              `A cargo de la reestructuración de un sistema de facturación electrónica cumpliendo con los estándares de la DIAN,
-          apoyo a mantenimiento de aplicaciones, cumpliendo funcionalidades como analista, definición de base de datos, programador front-end y back-end.`
+            tiempo: 'Ene 2018 - Nov 2019',
+            titulo: 'Técnico en contabilización de operaciones comerciales y financieras.'
+         }
+          ,
+          {
+            tiempo: 'Ene 2018 - Nov 2019',
+            titulo: 'Técnico en contabilización de operaciones comerciales y financieras.'
+          }
+          ,
+          {
+            tiempo: 'Ene 2018 - Nov 2019',
+            titulo: 'Técnico en contabilización de operaciones comerciales y financieras.'
           }
         ]
     }

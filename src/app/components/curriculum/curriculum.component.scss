@@ -1,7 +1,8 @@
 //************** Generales *******************
+
 main{
     width: 100%;
-    padding-top: 4rem;
+    // height: 75vh;
     font-family: var(--font--family);
 }
 
@@ -65,7 +66,6 @@ ul li:last-child::before{
 // telefono
 @media screen and (min-width: 768px) and (max-width: 1190px) {}
 
-
 //movil horizontal
 @media screen and (max-width: 767px) {
     .row {
@@ -75,11 +75,19 @@ ul li:last-child::before{
     .main{
         display: flex;
         justify-content: center;
+
         &_ex{
+            cursor: default;
             width: 100%;
+            padding-top: 4rem;
             display: flex;
             flex-direction: column;
             align-items: self-end;
+
+            &:last-of-type{
+                margin-bottom: 4rem;
+            }
+
             h3{
                 font-size: 1.8rem;
                 font-weight: 400;
@@ -87,11 +95,17 @@ ul li:last-child::before{
                 position: absolute;
                 left: 3rem;
             }
+        
             &_cont{
                 width: 80%;
-                margin-top: 4.5rem;
                 display: flex;
                 flex-direction: column;
+                
+                // El primer elemento con la misma clase
+                &:first-of-type{
+                    margin-top: 4rem;
+                }
+               
                 &_img{
                     position: relative;
                     margin-bottom: 1.5rem;

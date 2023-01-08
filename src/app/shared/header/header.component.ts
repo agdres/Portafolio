@@ -19,15 +19,17 @@ export class HeaderComponent implements OnInit,AfterViewInit {
   }
 
   // Modifica el estilo del header segun el scroll 
-  private SIguienteScroll = 1;
+  private SIguienteScroll = 150;
   HeaderStyle(){
     var scrollActual = window.scrollY;
     var header = document.getElementById('header');
     console.log(scrollActual);
     
-    if (scrollActual > 0) {
-      console.log("Actual: "+scrollActual);
-      console.log("Siguiente: "+this.SIguienteScroll);
+    if (scrollActual > 150) {
+      header?.classList.remove('header_mostrar');
+      header?.classList.remove('header_esconder');
+      // console.log("Actual: "+scrollActual);
+      // console.log("Siguiente: "+this.SIguienteScroll);
       
       if (scrollActual > this.SIguienteScroll) {
         header?.classList.add('header_esconder');
@@ -37,13 +39,14 @@ export class HeaderComponent implements OnInit,AfterViewInit {
         header?.classList.remove('header_esconder');
       }
       else {
-        header?.classList.remove('header_esconder');
         header?.classList.add('header_mostrar');
       }
       this.SIguienteScroll = scrollActual;
     } else {
         header?.classList.remove('header_mostrar');
-        document.documentElement.scrollTop = 0;
+        // document.documentElement.scrollTop = 0;
+        header?.classList.remove('header_mostrar');
+        this.SIguienteScroll = 150
     }
   }
 }

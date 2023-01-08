@@ -6,9 +6,9 @@
     margin: 0;
 }
 
-::-webkit-scrollbar {
-    display: none;
-}
+// ::-webkit-scrollbar {
+//     display: none;
+// }
 :root {
     --color--background: rgb(242, 242, 242);
     --color--background-second: rgb(199, 202, 217);
@@ -22,5 +22,4 @@
 body {
     background-color: var(--color--background);
     width: 100% !important;
-    height: 100vh;
 }
