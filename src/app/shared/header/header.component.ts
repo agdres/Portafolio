@@ -21,6 +21,7 @@ export class HeaderComponent implements OnInit,AfterViewInit {
   // Modifica el estilo del header segun el scroll 
   private SIguienteScroll = 150;
   HeaderStyle(){
+    
     var scrollActual = window.scrollY;
     var header = document.getElementById('header');
     

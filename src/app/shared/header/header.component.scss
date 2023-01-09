@@ -2,6 +2,9 @@
 .header{
     display: flex;
     width: 100% !important;
+    &_menubtn{
+        display: none;
+    }
 }
 
 //*** Color activar ***//
@@ -14,22 +17,7 @@
     opacity: 0;
     transition: all .5s;
   }
-  .header_mostrar {
-    position: fixed !important;
-    top: 0;
-    height: 18% !important;
-    transition: all .4s;
-    background-color: var(--color--background);
-    z-index: 9899;
-    border-bottom: 1px solid var(--color--background-second);
-    .header_menu {
-        transition: all .4s;
-        margin-top: -1.8rem !important;
-        li{
-            height: 2rem !important;
-        }
-    }
-  }
+
 //***************************************************//
 
 
@@ -49,6 +37,24 @@
     .row {
       --bs-gutter-x: 0 !important;
     }
+
+    .header_mostrar {
+        position: fixed !important;
+        top: 0;
+        height: 18% !important;
+        transition: all .4s;
+        background-color: var(--color--background);
+        z-index: 9899;
+        border-bottom: 1px solid var(--color--background-second);
+        .header_menu {
+            transition: all .4s;
+            margin-top: -1.8rem !important;
+            li{
+                height: 2rem !important;
+            }
+        }
+      }
+
     .header{
         animation-name: topAnimacion;
         animation-duration: 1s;
@@ -102,7 +108,48 @@
 
 //movil vertical
 @media (max-width: 480px) { 
-   
+    .header_mostrar {
+        position: fixed !important;
+        top: 0;
+        height: 18% !important;
+        transition: all .4s;
+        background-color: var(--color--background);
+        z-index: 9899;
+        border-bottom: 1px solid var(--color--background-second);
+        .header_encabezado {
+            height: 4rem;
+        }
+        .header_menu {
+            transition: all .4s;
+            margin-top: 0rem !important;
+            li{
+                height: 2rem !important;
+            }
+        }
+      }
+
+
+
+   .header{
+    height: 18rem !important;
+    padding-top: 3.5rem;
+    &_encabezado{
+        height: 2rem;
+    }
+    &_menu{
+        display:block;
+
+        li{
+            margin-top: 1rem;
+            &:hover{
+                background-size: 0%;
+            }
+            &:active{
+                color: var(--color--text--second);
+            }
+        }
+    }
+   }
 }
 
 
