@@ -14,18 +14,57 @@
 @media screen and (min-width: 1024px) {}
 
 // telefono
-@media screen and (min-width: 768px) and (max-width: 1190px) {}
+@media screen and (min-width: 768px) and (max-width: 1190px) {
+    .home {
+        height: 75vh;
+        &_block {
+            position: relative;
+            width: 80%;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            &_img{
+                width: 50%;
+                img {
+                    border-radius: 50%;
+                    width: 300px;
+                    height: 300px;
+                    animation-name: bottAnimacion;
+                    animation-duration: 1.5s;
+                }
+            }
+
+            &_presentacion {
+                width: 50%;
+                margin-top: 3rem;
+                font-family: var(--font--family);
+                animation-name: bottAnimacion;
+                animation-duration: 1.8s;
+                h4 {
+                    font-size: 1.6rem;
+                    font-weight: 500;
+                    letter-spacing: .2rem;
+                }
+
+                p {
+                    width: 80%;
+                    margin: 0 auto;
+                    text-align: justify;
+                    font-size: .9rem;
+                }
+            }
+        }
+
+    }
+
+
+}
 
 
 //movil horizontal
 @media screen and (max-width: 767px) {
-    .row {
-        --bs-gutter-x: 0 !important;
-    }
-
     .home {
         height: 72vh;
-        margin-bottom: 2rem;
         &_block {
             width: 80%;
             text-align: center;
@@ -65,7 +104,8 @@
 @media (max-width: 480px) {
     .home {
         height: 65vh;
-    
+        margin-bottom: 2rem;
+
         &_block {
             width: 100%;
             text-align: center;

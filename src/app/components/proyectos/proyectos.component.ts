@@ -63,22 +63,21 @@ export class ProyectosComponent implements OnInit {
   ]
 
 ngOnInit(): void {
+  setInterval(()=>{
   this.Carousel()
-  
+  },6000);
 }
 
 Carousel(){
   var width  = window.innerWidth;
-  console.log(width);
-  setInterval(()=>{
-    if (width <= 767) {
-      var Opciones = document.querySelectorAll('.conocimientos_cont_list');
-      Opciones.forEach(x =>{
-        x.classList.toggle('list_activo');
-        x.classList.toggle('list_inactivo');
-      });
-    }
-  },6000);
+  if (width <= 767) {
+    var Opciones = document.querySelectorAll('.conocimientos_cont_list');
+    Opciones.forEach(x =>{
+      x.classList.toggle('list_activo');
+      x.classList.toggle('list_inactivo');
+    });
+  }
+  
   
 }
 

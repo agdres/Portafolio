@@ -1,11 +1,17 @@
 // Generales
 .header{
     display: flex;
-    width: 100% !important;
-    &_menubtn{
-        display: none;
-    }
+    width: 100%;
+    font-family: var(--font--family);
+    color: var(--color--text--primary);
+    animation-name: topAnimacion;
+    animation-duration: 1s;
+    position: relative;
+   
 }
+
+
+
 
 //*** Color activar ***//
 .option_active{
@@ -29,14 +35,76 @@
 // telefono
 @media screen and (min-width: 768px) and (max-width: 1190px) {
 
+    .header_mostrar {
+        position: fixed !important;
+        top: 0;
+        height: 7rem !important;
+        transition: all .4s;
+        background-color: var(--color--background);
+        z-index: 9899;
+        border-bottom: 1px solid var(--color--background-second);
+        .header_menu {
+            transition: all .4s;
+        }
+      }
+
+
+
+    .header{
+        animation-name: topAnimacion;
+        animation-duration: 1s;
+        height: 7rem;
+        align-items: center;
+        transition: all .5s;
+        position: relative;
+        &_encabezado{
+            padding-top: 1.5rem;
+            font-weight: 500;
+            font-size: 1.5rem;
+            span{
+                cursor: pointer;
+            }
+            h4{
+                cursor: default;
+            }
+        }
+
+        &_menu{
+            display: flex;
+            justify-content: center;
+            list-style: none;
+
+            li{
+                cursor: pointer;
+                text-align: center;
+                margin: 0 auto;
+                font-size: 1rem;
+                background-image: linear-gradient(90deg ,var(--color--text--second),var(--color--text--second));
+                background-repeat: no-repeat;
+                background-size: 0% 2px;
+                background-position: center bottom;
+                transition: background-size .4s ease-in-out;
+                // &:hover{
+                //     color: var(--color--text--second);
+                // }
+                &:hover{
+                    background-size: 100% 2px;
+                }
+                &:active{
+                    color: var(--color--text--second);
+                }
+            }
+        }
+    }
+
+
+
 }
 
 
 //movil horizontal
 @media screen and (max-width: 767px) {
-    .row {
-      --bs-gutter-x: 0 !important;
-    }
+   
 
     .header_mostrar {
         position: fixed !important;
@@ -62,8 +130,6 @@
         transition: all .5s;
         position: relative;
         padding-top: 2rem;
-        font-family: var(--font--family);
-        color: var(--color--text--primary);
         &_encabezado{
             font-weight: 500;
             font-size: 1.5rem;
