@@ -73,7 +73,35 @@ a:hover{
 }
 
 //movil vertical
-@media (max-width: 480px) {}
+@media (max-width: 480px) {
+
+    .footer{
+        display: flex;
+        width: 100%;
+        cursor: pointer;
+        justify-content: center;
+        font-family: var(--font--family);
+        flex-direction: column;
+        &_option{
+            &:nth-child(1){
+                width: 100%;
+                // background-color: aqua;
+            }
+            &:nth-child(2){
+                width: 100%;
+                // background-color: rgb(44, 0, 85);
+            }
+            &:nth-child(3){
+                width: 100%;
+                // background-color: rgb(250, 16, 172);
+            }
+            &:nth-child(4){
+                width: 100%;
+                // background-color: rgb(43, 255, 0);
+            }
+        }
+    }
+}
 
 
 

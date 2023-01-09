@@ -147,7 +147,55 @@ ul li:last-child::before{
 }
 
 //movil vertical
-@media (max-width: 480px) {}
+@media (max-width: 480px) {
+ .main{
+       
+        &_ex{
+            
+
+            &:last-of-type{
+         
+            }
+
+            h3{
+             width: 100%;
+             left: 1rem;
+            }
+        
+            &_cont{
+                width: 95%;
+               
+                &:first-of-type{
+                  
+                }
+               
+                &_img{
+                   
+                    img{
+                       
+                    }
+                    h5{
+                     
+                    }
+                }
+
+                &_list{
+                    li{
+                        h4{
+                        }
+                        h5{
+                        }
+                        p{
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+}
 
 
 

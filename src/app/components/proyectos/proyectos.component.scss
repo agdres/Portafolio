@@ -6,11 +6,6 @@ main{
 }
 
 // Stilño listados
-.list_activo{
-    display: inherit !important;
-    animation-name: CarouselAnimacion;
-    animation-duration: 2s;
-}
 
 .list_inactivo{
     display: none !important;
@@ -29,6 +24,11 @@ main{
         --bs-gutter-x: 0 !important;
     }
 
+    .list_activo{
+        display: inherit !important;
+        animation-name: CarouselAnimacion;
+        animation-duration: 2s;
+    }
 
     // Conocimientos
     .conocimientos{
@@ -170,7 +170,35 @@ main{
 }
 
 //movil vertical
-@media (max-width: 480px) {}
+@media (max-width: 480px) {
+.list_activo{
+    display: inherit !important;
+    animation-name: CarouselAnimacion2;
+    animation-duration: 2s;
+}
+    // Conocimientos
+    .conocimientos{
+        &_cont{
+            width: 100%;
+            &_list{
+                width: 90%;
+                li{
+                    list-style-type: none;
+                    width:100%;
+                }
+               
+                .list_opcion{
+                    width: 9rem;
+                }
+                p{
+                    font-size: .75rem;
+                }
+            }
+        }
+
+    }
+
+}
 
 
 
@@ -195,6 +223,18 @@ main{
 @keyframes CarouselAnimacion{
     from {
         transform: translateX(10%);
+        opacity: 0;
+    }
+    
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes CarouselAnimacion2{
+    from {
+        transform: translateX(5%);
         opacity: 0;
     }
     
