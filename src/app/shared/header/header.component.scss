@@ -29,6 +29,67 @@
 
 // Escritorios
 @media screen and (min-width: 1024px) {
+ .header_mostrar {
+        position: fixed !important;
+        top: 0;
+        height: 7rem !important;
+        transition: all .4s;
+        background-color: var(--color--background);
+        z-index: 9899;
+        border-bottom: 1px solid var(--color--background-second);
+        .header_menu {
+            transition: all .4s;
+        }
+      }
+
+
+
+    .header{
+        animation-name: topAnimacion;
+        animation-duration: 1s;
+        height: 7rem;
+        align-items: center;
+        transition: all .5s;
+        position: relative;
+        &_encabezado{
+            padding-top: 1.5rem;
+            font-weight: 500;
+            font-size: 1.5rem;
+            span{
+                cursor: pointer;
+            }
+            h4{
+                cursor: default;
+            }
+        }
+
+        &_menu{
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            width: 35%;
+            li{
+                cursor: pointer;
+                text-align: center;
+                margin: 0 auto;
+                font-size: 1rem;
+                background-image: linear-gradient(90deg ,var(--color--text--second),var(--color--text--second));
+                background-repeat: no-repeat;
+                background-size: 0% 2px;
+                background-position: center bottom;
+                transition: background-size .4s ease-in-out;
+                // &:hover{
+                //     color: var(--color--text--second);
+                // }
+                &:hover{
+                    background-size: 100% 2px;
+                }
+                &:active{
+                    color: var(--color--text--second);
+                }
+            }
+        }
+    }
 
 }
 
@@ -96,8 +157,6 @@
             }
         }
     }
-
-
 
 }
 
