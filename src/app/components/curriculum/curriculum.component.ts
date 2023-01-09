@@ -18,8 +18,8 @@ export class CurriculumComponent implements OnInit {
             tiempo: 'Oct 2022 - Actual',
             cargo: 'Programador - Analista',
             descripcion:
-              `Actualmente me encuentro laborando como programador full-stack, realizando diversos desarrollos según requerimientos de la empresa
-          estos varían desde nuevos desarrollos, implementaciones, apoyo en arreglos a proyectos antiguos y en implementación de nuevos módulos a otros proyectos.`
+              `Actualmente me encuentro laborando como programador full-stack, realizando diversos desarrollos web o de escritorio según requerimientos de la empresa
+          estos varían desde nuevos desarrollos, apoyo en correción de errores a proyectos antiguos y en implementación de nuevos módulos a otros proyectos.`
           },
           {
             tiempo: 'Abr 2022 - Sept 2022 (6 Meses)',

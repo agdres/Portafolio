@@ -4,6 +4,7 @@
     padding-left: .5rem;
     padding-right: .5rem;
     width: 100%;
+    cursor: pointer;
     justify-content: center;
     font-family: var(--font--family);
     &_option{
@@ -39,11 +40,22 @@
         span{
             font-size: .9rem;
             width: 5rem;
+            &:hover{
+                color: var(--color--text--second);
+                transition: all .5s;
+            }
         }
     }
 }
 //********************************************
 
+a:hover{
+    svg{
+        path{
+            fill: var(--color--text--second);
+        }
+    }
+}
 
 // Escritorios
 @media screen and (min-width: 1024px) {}

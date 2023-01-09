@@ -103,7 +103,7 @@
                 {{detalles.descripcion}}
               </p>
             </mat-card-content>
-            <mat-card-actions>
+            <mat-card-actions *ngIf="detalles.ruta != ''">
               <button mat-button>Ver</button>
             </mat-card-actions>
         </mat-card>

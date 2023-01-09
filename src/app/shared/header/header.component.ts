@@ -48,4 +48,12 @@ export class HeaderComponent implements OnInit,AfterViewInit {
         this.SIguienteScroll = 150
     }
   }
+
+
+  descargar(){
+    const link = document.createElement("a");
+    link.href = 'assets/documents/CV.pdf';
+    link.download = `CV_Andres_Martinez.pdf`;
+    link.click();
+  }
 }

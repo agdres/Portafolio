@@ -13,9 +13,6 @@ main{
 }
 
 .list_inactivo{
-    animation-name: CarouselOcultaAnimacion;
-    animation-duration: 2s;
-
     display: none !important;
 }
 
@@ -115,7 +112,8 @@ main{
         animation-duration: 1.5s;
         width: 300px;
         margin: .5rem;
-
+        cursor: pointer;
+ 
         mat-card-header{
             justify-content: center;
         }
@@ -196,7 +194,7 @@ main{
 // Carousel animation
 @keyframes CarouselAnimacion{
     from {
-        transform: translateX(100%);
+        transform: translateX(10%);
         opacity: 0;
     }
     
@@ -206,14 +204,4 @@ main{
     }
 }
 
-@keyframes CarouselOcultaAnimacion{
-    from {
-        transform: translateX(0%);
-        opacity: 1;
-    }
-    
-    to {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-}
+
