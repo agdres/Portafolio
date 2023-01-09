@@ -1,8 +1,14 @@
+//***** Generales *****//
 main{
     width: 100%;
     // height: 75vh;
     font-family: var(--font--family);
 }
+
+:export {
+  colors-danger: "#f53d3d";
+}
+
 
 // Escritorios
 @media screen and (min-width: 1024px) {}
@@ -15,6 +21,100 @@ main{
     .row {
         --bs-gutter-x: 0 !important;
     }
+
+    // Conocimientos
+    .conocimientos{
+        width: 100%;
+        position: relative;
+        margin-top: 6rem;
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+        h5{
+            position: absolute;
+            margin-top: -2rem;
+            top: 0;
+        }
+        &_carousel{
+            width: inherit;
+            &_content{
+                width: 80%;
+            }
+        }
+    }
+
+
+
+    //
+
+
+
+    // Proyectos
+    mat-expansion-panel , mat-accordion{
+        width: 100%;
+        background-color: var(--color--background);
+        margin-top: .1rem;
+        margin-bottom: .1rem;
+    }
+
+    mat-card{
+        animation-name: CenterAnimacion;
+        animation-duration: 1.5s;
+        width: 300px;
+        margin: .5rem;
+
+        mat-card-header{
+            justify-content: center;
+        }
+        mat-card-title{
+            font-family: var(--font--family);
+            font-size: 1.1rem;
+            //margin-top: .7rem;
+        }
+        mat-card-content {
+            justify-content: center;
+            p{
+                padding-top: 1rem;
+                font-family: var(--font--family);
+                font-size: .9rem;
+                width: 90%;
+                margin: 0 auto;
+                text-align: justify;
+            }
+        }
+        mat-card-actions{
+            justify-content: end;
+        }
+        // background-color: var(--color--background);
+    }
+
+
+    .main{
+        margin-bottom: 4.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        //
+        &_empresa{
+            width: 100%;
+            text-align: center;
+            &_section{
+                display: flex;
+            }
+            &_encabezado{
+                img{
+                    width: 2.5rem;
+                    height: 2.5rem;
+                    margin-right: 1rem;
+                    border-radius: 50%;
+                    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+                }
+            }
+            &_img{
+                object-fit: scale-down;
+            }
+        }
+    }
 }
 
 //movil vertical
@@ -23,15 +123,17 @@ main{
 
 
 // Animaciones
-// animation-name: leftAnimacion;
+// animation-name: CenterAnimacion;
 // animation-duration: 1.5s;
-@keyframes leftAnimacion{
+@keyframes CenterAnimacion{
     from {
-        transform: translateX(-50px);
+        transform: translateX(50%);
+        transform: translateY(50%);
         opacity: 0;
     }
     
     to {
+        transform: translateX(0px);
         transform: translateY(0px);
         opacity: 1;
     }

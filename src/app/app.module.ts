@@ -9,6 +9,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { CurriculumComponent } from './components/curriculum/curriculum.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
+import { MaterialModule } from './core/material.core';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ProyectosComponent } from './components/proyectos/proyectos.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
