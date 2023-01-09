@@ -5,8 +5,13 @@ main{
     font-family: var(--font--family);
 }
 
-:export {
-  colors-danger: "#f53d3d";
+// Stilño listados
+.list_activo{
+    display: inherit !important;
+}
+
+.list_inactivo{
+    display: none !important;
 }
 
 
@@ -30,17 +35,59 @@ main{
         height: 10vh;
         display: flex;
         justify-content: center;
-        h5{
+        
+        h3{
+            font-size: 1.8rem;
+            font-weight: 400;
             position: absolute;
-            margin-top: -2rem;
-            top: 0;
+            letter-spacing: .2rem;
+            top: -2rem;
+            margin: 0 auto;
         }
-        &_carousel{
-            width: inherit;
-            &_content{
+
+        &_cont{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+            &_list{
                 width: 80%;
+                justify-content: center;
+                position:relative;
+                display: inherit;
+                flex-direction:row;
+                  
+                li{
+                    list-style-type: none;
+                    width:100%;
+                }
+               
+                .list_opcion{
+                    display: inline-grid;
+                    width: 8rem;
+                    justify-content: center;
+                    .svg_c{
+                        path {
+                            fill: rgb(100, 32, 118) !important;
+                        }
+                    }
+                    .svg_php{
+                        path {
+                            fill: rgb(77, 88, 142)!important;
+                        }
+                    }
+                    
+                    i{
+                        text-align-last: center;
+                    }
+                    p{
+                        font-family: var(--font--family);
+                        margin: 0 auto;
+                    }
+                }
             }
         }
+
     }
 
 
@@ -94,6 +141,7 @@ main{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        margin-top: 2rem;
         //
         &_empresa{
             width: 100%;
