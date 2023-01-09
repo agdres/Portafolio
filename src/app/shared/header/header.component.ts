@@ -23,7 +23,6 @@ export class HeaderComponent implements OnInit,AfterViewInit {
   HeaderStyle(){
     var scrollActual = window.scrollY;
     var header = document.getElementById('header');
-    console.log(scrollActual);
     
     if (scrollActual > 150) {
       header?.classList.remove('header_mostrar');

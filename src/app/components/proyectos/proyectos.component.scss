@@ -8,9 +8,14 @@ main{
 // Stilño listados
 .list_activo{
     display: inherit !important;
+    animation-name: CarouselAnimacion;
+    animation-duration: 2s;
 }
 
 .list_inactivo{
+    animation-name: CarouselOcultaAnimacion;
+    animation-duration: 2s;
+
     display: none !important;
 }
 
@@ -26,6 +31,7 @@ main{
     .row {
         --bs-gutter-x: 0 !important;
     }
+
 
     // Conocimientos
     .conocimientos{
@@ -46,7 +52,7 @@ main{
         }
 
         &_cont{
-            width: 100%;
+            width: 90%;
             display: flex;
             justify-content: center;
             margin-top: 2rem;
@@ -171,7 +177,7 @@ main{
 
 
 // Animaciones
-// animation-name: CenterAnimacion;
+// animation-name: CarouselAnimacion;
 // animation-duration: 1.5s;
 @keyframes CenterAnimacion{
     from {
@@ -184,5 +190,30 @@ main{
         transform: translateX(0px);
         transform: translateY(0px);
         opacity: 1;
+    }
+}
+
+// Carousel animation
+@keyframes CarouselAnimacion{
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes CarouselOcultaAnimacion{
+    from {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    
+    to {
+        transform: translateX(-100%);
+        opacity: 0;
     }
 }
