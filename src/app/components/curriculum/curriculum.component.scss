@@ -61,14 +61,86 @@ ul li:last-child::before{
 @media screen and (min-width: 1024px) {}
 
 // telefono
-@media screen and (min-width: 768px) and (max-width: 1190px) {}
+@media screen and (min-width: 768px) and (max-width: 1190px) {
+.main{
+        display: flex;
+        justify-content: center;
+
+        &_ex{
+            cursor: default;
+            width: 100%;
+            padding-top: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: self-end;
+            animation-name: leftTituloAnimacion;
+            animation-duration: 1s;
+
+            &:last-of-type{
+                margin-bottom: 4rem;
+            }
+
+            h3{
+                font-size: 1.8rem;
+                font-weight: 400;
+                letter-spacing: .2rem;
+                position: absolute;
+                left: 3rem;
+            }
+        
+            &_cont{
+                animation-name: leftAnimacion;
+                animation-duration: 1.5s;
+                width: 90%;
+                display: flex;
+                flex-direction: column;
+                
+                // El primer elemento con la misma clase
+                &:first-of-type{
+                    margin-top: 4rem;
+                }
+               
+                &_img{
+                    position: relative;
+                    margin-bottom: 1.5rem;
+                    img{
+                        width: 2.5rem;
+                        height: 2.5rem;
+                        border-radius: 50%;
+                        box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+                    }
+                    h5{
+                        position: absolute;
+                        top: 0.7rem;
+                        left: 3rem;
+                        text-align: justify;
+                        font-size: .98rem;
+                        font-weight: 400;
+                        font-weight: 500;
+                    }
+                }
+
+                &_list{
+                    li{
+                        h4{
+                            font-weight: 500;
+                        }
+                        h5{
+                            margin-top: -1rem;
+                        }
+                        p{
+                            text-align: justify;
+                            width: 90%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 //movil horizontal
 @media screen and (max-width: 767px) {
-    .row {
-        --bs-gutter-x: 0 !important;
-    }
-
     .main{
         display: flex;
         justify-content: center;
