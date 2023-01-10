@@ -1,24 +1,77 @@
 //************** Generales *******************
-
-main{
+.main{
+    margin-top: 1rem;
     width: 100%;
-    // height: 75vh;
-    font-family: var(--font--family);
+    display: flex;
+    justify-content: center;
+    &__experiencia{
+        cursor: default;
+        display: inherit;
+        flex-direction: column;
+        align-items: self-end;
+        animation-name: leftTituloAnimacion;
+        animation-duration: 1s;
+        justify-content: center;
+        width: 80%;
+        h3{
+            font-size: 1.5rem;
+            font-weight: 400;
+            letter-spacing: .2rem;
+            align-self: start;
+            margin-left: 15%;
+        }
+    
+        &--section{
+            animation-name: leftAnimacion;
+            animation-duration: 1.5s;
+            display: flex;
+            flex-direction: column;
+                       
+            &-img{
+                position: relative;
+                margin-bottom: 1.5rem;
+                img{
+                    width: 2.5rem;
+                    height: 2.5rem;
+                    border-radius: 50%;
+                    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+                }
+                h5{
+                    position: absolute;
+                    top: 0.7rem;
+                    left: 3rem;
+                    text-align: justify;
+                    font-size: .98rem;
+                    font-weight: 500;
+                }
+            }
+
+            &-list{
+                li{
+                    h4{
+                        font-weight: 500;
+                    }
+                    h5{
+                        margin-top: -1rem;
+                    }
+                    p{
+                        width: 80%;
+                        text-align: justify;
+                    }
+                }
+            }
+        }
+    }
 }
 
 //********************************************
 
 //****** Linea del tiempo ******//
-ul {
-    position:relative;
-  }
-  
-ul li{
-    list-style-type: none;
-}
-  
+
+
 // Estilos del lado derecho de la linea
 ul li {
+list-style-type: none;
 position:relative;  
 padding-left: 1rem;
 }
@@ -42,251 +95,86 @@ ul li:last-child::before{
     content: none;
 }
 // Lineas
-  ul li::before {
+ul li::before {
     content:'';
-    display: block;
     width: 2px;
-    margin-top: 1.5rem;
-    height: 90%;
+    height: 95%;
     background-color: var(--color--background-second);
     position:absolute;
-    top:0;
+    top: 19px;
     left: -0.7rem; 
-  }
+}
   
 //
 
 
 // Escritorios
 @media screen and (min-width: 1024px) {
-.main{
+    .main{
+        width: 100%;
         display: flex;
         justify-content: center;
-        &_ex{
-            cursor: default;
-            
-            width: 90%;
-            padding-top: 1.5rem;
-            display: flex;
-            flex-direction: column;
-            align-items: self-end;
-            animation-name: leftTituloAnimacion;
-            animation-duration: 1s;
-
-            &:last-of-type{
-                margin-bottom: 4rem;
-            }
-
-            h3{
-                font-size: 1.8rem;
-                font-weight: 400;
-                letter-spacing: .2rem;
-                align-self: start;
-                margin-left: 25%;
-            }
-        
-            &_cont{
-                animation-name: leftAnimacion;
-                animation-duration: 1.5s;
-                width: 70%;
-                display: flex;
-                flex-direction: column;
-                
-                // El primer elemento con la misma clase
-                &:first-of-type{
-                    margin-top: 2rem;
-                }
-               
-                &_img{
-                    position: relative;
-                    margin-bottom: 1.5rem;
-                    img{
-                        width: 2.5rem;
-                        height: 2.5rem;
-                        border-radius: 50%;
-                        box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
-                    }
-                    h5{
-                        position: absolute;
-                        top: 0.7rem;
-                        left: 3rem;
-                        text-align: justify;
-                        font-size: .98rem;
-                        font-weight: 400;
-                        font-weight: 500;
-                    }
-                }
-
-                &_list{
+        flex-direction: column;
+        &__experiencia{       
+            width: 80%;
+            margin: 0 auto;
+            &--section{
+                width: 80%;
+                &-list{
                     li{
-                        h4{
-                            font-weight: 500;
-                        }
-                        h5{
-                            margin-top: -1rem;
-                        }
                         p{
-                            text-align: justify;
-                            width: 90%;
+                            width: 80%;
                         }
                     }
                 }
             }
         }
     }
-
 }
 
 // telefono
 @media screen and (min-width: 768px) and (max-width: 1190px) {
-.main{
+    .main{
+        width: 100%;
         display: flex;
         justify-content: center;
-
-        &_ex{
-            cursor: default;
-            width: 100%;
-            padding-top: 1.5rem;
-            display: flex;
-            flex-direction: column;
-            align-items: self-end;
-            animation-name: leftTituloAnimacion;
-            animation-duration: 1s;
-
-            &:last-of-type{
-                margin-bottom: 4rem;
-            }
-
-            h3{
-                font-size: 1.8rem;
-                font-weight: 400;
-                letter-spacing: .2rem;
-                position: absolute;
-                align-self: start;
-                margin-left: 4%;
-            }
-        
-            &_cont{
-                animation-name: leftAnimacion;
-                animation-duration: 1.5s;
-                width: 90%;
-                display: flex;
-                flex-direction: column;
-                
-                // El primer elemento con la misma clase
-                &:first-of-type{
-                    margin-top: 4rem;
-                }
-               
-                &_img{
-                    position: relative;
-                    margin-bottom: 1.5rem;
-                    img{
-                        width: 2.5rem;
-                        height: 2.5rem;
-                        border-radius: 50%;
-                        box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
-                    }
-                    h5{
-                        position: absolute;
-                        top: 0.7rem;
-                        left: 3rem;
-                        text-align: justify;
-                        font-size: .98rem;
-                        font-weight: 400;
-                        font-weight: 500;
-                    }
-                }
-
-                &_list{
+        flex-direction: column;
+        &__experiencia{       
+            width: 80%;
+            margin: 0 auto;
+            &--section{
+                width: 80%;
+                &-list{
                     li{
-                        h4{
-                            font-weight: 500;
-                        }
-                        h5{
-                            margin-top: -1rem;
-                        }
                         p{
-                            text-align: justify;
-                            width: 90%;
+                            width: 85%;
                         }
                     }
                 }
             }
         }
     }
+
 }
 
 //movil horizontal
 @media screen and (max-width: 767px) {
     .main{
+        width: 100%;
         display: flex;
         justify-content: center;
-
-        &_ex{
-            cursor: default;
-            width: 100%;
-            padding-top: 4rem;
-            display: flex;
-            flex-direction: column;
-            align-items: self-end;
-            animation-name: leftTituloAnimacion;
-            animation-duration: 1s;
-
-            &:last-of-type{
-                margin-bottom: 4rem;
-            }
-
+        flex-direction: column;
+        &__experiencia{       
+            width: 90%;
+            margin: 0 auto;
             h3{
-                font-size: 1.8rem;
-                font-weight: 400;
-                letter-spacing: .2rem;
-                position: absolute;
-                left: 3rem;
+                margin-left: 10%;
             }
-        
-            &_cont{
-                animation-name: leftAnimacion;
-                animation-duration: 1.5s;
-                width: 80%;
-                display: flex;
-                flex-direction: column;
-                
-                // El primer elemento con la misma clase
-                &:first-of-type{
-                    margin-top: 4rem;
-                }
-               
-                &_img{
-                    position: relative;
-                    margin-bottom: 1.5rem;
-                    img{
-                        width: 2.5rem;
-                        height: 2.5rem;
-                        border-radius: 50%;
-                        box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
-                    }
-                    h5{
-                        position: absolute;
-                        top: 0.7rem;
-                        left: 3rem;
-                        text-align: justify;
-                        font-size: .98rem;
-                        font-weight: 400;
-                        font-weight: 500;
-                    }
-                }
-
-                &_list{
+            &--section{
+                width: 90%;
+                &-list{
                     li{
-                        h4{
-                            font-weight: 500;
-                        }
-                        h5{
-                            margin-top: -1rem;
-                        }
                         p{
-                            text-align: justify;
                             width: 90%;
                         }
                     }
@@ -298,52 +186,53 @@ ul li:last-child::before{
 
 //movil vertical
 @media (max-width: 480px) {
- .main{
-       
-        &_ex{
-            
-
-            &:last-of-type{
-         
-            }
-
+    .main{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        &__experiencia{       
+            width: inherit;
+            margin: 0 auto;
             h3{
-             width: 100%;
-             left: 1rem;
+                margin-left: 1rem;
             }
-        
-            &_cont{
-                width: 95%;
-               
-                &:first-of-type{
-                  
-                }
-               
-                &_img{
-                   
+            &--section{
+                width: 90%;
+
+                &-img{
+                    // position: relative;
+                    // margin-bottom: 1.5rem;
                     img{
-                       
+                        width: 2.5rem;
+                        height: 2.5rem;
+                        border-radius: 50%;
+                        box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
                     }
                     h5{
-                     
+                        position: absolute;
+                        top: 0.7rem;
+                        left: 3rem;
+                        text-align: justify;
+                        font-size: .9rem;
+                        width: 80%;
+                        font-weight: 500;
                     }
                 }
 
-                &_list{
+                &-list{
                     li{
                         h4{
-                        }
-                        h5{
+                            width: 90%;
                         }
                         p{
-                            
+                            width: 90%;
                         }
                     }
                 }
             }
         }
     }
-
 
 }
 
