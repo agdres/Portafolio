@@ -127,8 +127,6 @@
 //movil horizontal
 @media screen and (max-width: 767px) {
     .header--mostrar {
-        position: fixed !important;
-        top: 0;
         height: 5rem !important;
         .header__encabezado{
             display: none;
@@ -165,18 +163,20 @@
 //movil vertical
 @media (max-width: 480px) { 
     .header--mostrar {
-        position: fixed !important;
-        top: 0;
-        height: 5rem !important;
+        height: 8rem;
         .header__encabezado{
-            display: inherit;
-            font-size: 1.2rem;
+            display: none;
         }
         .header__menu {
-            width: 100%;
-            margin-top: 0;
-            ul li{
-                margin: 0 auto;
+            ul{ 
+                width: 90%;
+                li{
+                    height: 2rem;
+                    font-size: 0.8rem;
+                    &:hover{
+                        background-size: 0%;
+                    }
+                }
             }
         }
       }
@@ -184,7 +184,7 @@
     .header{
         align-items: center;
         transition: all .5s;
-        height: 8rem;
+        height: 10rem;
         flex-direction: column;
         &__encabezado{
            width: 100%;
@@ -197,15 +197,14 @@
         }
         
         &__menu{
+            margin-top: 2rem;
             width: 100%;
             ul{ 
-                flex-direction: column;
                 transition: all .4s;
-                display: none;
                 li{
                     height: 2rem;
                     margin: 0 auto;
-                    font-size: 1.1rem;
+                    font-size: 0.9rem;
                     &:hover{
                         background-size: 0%;
                     }

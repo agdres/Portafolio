@@ -11,10 +11,10 @@ export class HeaderComponent implements OnInit,AfterViewInit {
     let width = window.innerWidth;
     let heigth = window.scrollY;
     //console.log(width);
-   console.log(heigth);
+   //console.log(heigth);
 
     if(width <= 499){
-      this.HeaderStyle(50);
+      this.HeaderStyle(70);
     }
     else if (width <= 767 && width >= 481) {
       this.HeaderStyle(80);
@@ -40,8 +40,8 @@ export class HeaderComponent implements OnInit,AfterViewInit {
     
     if (scrollActual > scrollTop) {
 
-      console.log("Actual: "+scrollActual);
-      console.log("Siguiente: "+this.SIguienteScroll);
+      //console.log("Actual: "+scrollActual);
+      //console.log("Siguiente: "+this.SIguienteScroll);
       
       if (scrollActual >= this.SIguienteScroll) {
         header?.classList.add('header--esconder');
