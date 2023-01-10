@@ -8,7 +8,20 @@ import { Component,OnInit,AfterViewInit, HostListener } from '@angular/core';
 export class HeaderComponent implements OnInit,AfterViewInit {
   // Detectar el scroll en pantalla
   @HostListener('window:scroll', ['$event']) onScrollEvent($event:any){
-    this.HeaderStyle();
+    let width = window.innerWidth;
+    let heigth = window.scrollY;
+    //console.log(width);
+   console.log(heigth);
+
+    if(width <= 499){
+      this.HeaderStyle(50);
+    }
+    else if (width <= 767 && width >= 481) {
+      this.HeaderStyle(80);
+    }else{
+      this.HeaderStyle(110);
+    }
+    
   } 
   ngOnInit(): void {
 
@@ -19,36 +32,35 @@ export class HeaderComponent implements OnInit,AfterViewInit {
   }
 
   // Modifica el estilo del header segun el scroll 
-  private SIguienteScroll = 150;
-  HeaderStyle(){
+  private SIguienteScroll = 0;
+  HeaderStyle(scrollTop:number){
     
     var scrollActual = window.scrollY;
     var header = document.getElementById('header');
     
-    if (scrollActual > 150) {
-      header?.classList.remove('header_mostrar');
-      header?.classList.remove('header_esconder');
-      // console.log("Actual: "+scrollActual);
-      // console.log("Siguiente: "+this.SIguienteScroll);
+    if (scrollActual > scrollTop) {
+
+      console.log("Actual: "+scrollActual);
+      console.log("Siguiente: "+this.SIguienteScroll);
       
-      if (scrollActual > this.SIguienteScroll) {
-        header?.classList.add('header_esconder');
-      } 
-      else if (scrollActual > this.SIguienteScroll){
-        header?.classList.remove('header_mostrar');
-        header?.classList.remove('header_esconder');
+      if (scrollActual >= this.SIguienteScroll) {
+        header?.classList.add('header--esconder');
+        header?.classList.remove('header--mostrar');
       }
-      else {
-        header?.classList.add('header_mostrar');
+      else{
+        header?.classList.add('header--mostrar');
+        header?.classList.remove('header--esconder');
       }
-      this.SIguienteScroll = scrollActual;
+        this.SIguienteScroll = scrollActual;
     } else {
-        header?.classList.remove('header_mostrar');
+      header?.classList.remove('header--esconder');
+      header?.classList.remove('header--mostrar');
+      this.SIguienteScroll = scrollTop;
         // document.documentElement.scrollTop = 0;
-        header?.classList.remove('header_mostrar');
-        this.SIguienteScroll = 150
     }
   }
+
+
 
 
   descargar(){

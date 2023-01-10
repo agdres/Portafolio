@@ -1,13 +1,54 @@
 // Generales
 .header{
-    display: flex;
-    width: 100%;
     font-family: var(--font--family);
     color: var(--color--text--primary);
+    //background-color: var(--color--background);
+    background-color: aqua;
+    width: 100%;
+    height: 6rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
     animation-name: topAnimacion;
     animation-duration: 1s;
-    position: relative;
-   
+    &__encabezado{
+        font-weight: 500;
+        font-size: 1.5rem;
+        flex-direction: column;
+        
+        span{
+            cursor: pointer;
+        }
+        h4{
+            cursor: default;
+        }
+    }
+
+    &__menu{
+        ul{
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        li{
+            cursor: pointer;
+            text-align: center;
+            font-size: 1rem;
+            background-image: linear-gradient(90deg ,var(--color--text--second),var(--color--text--second));
+            background-repeat: no-repeat;
+            background-size: 0% 2px;
+            background-position: center bottom;
+            transition: background-size .4s ease-in-out;
+            &:hover{
+                background-size: 100% 2px;
+            }
+            &:active{
+                color: var(--color--text--second);
+            }
+        }
+    }
 }
 
 
@@ -17,76 +58,44 @@
 .option_active{
     color: var(--color--text--second);
 }
+
 //**************** Scroll Header *******************//
-.header_esconder{
+.header--esconder{
     transform: translateY(-100%);
     opacity: 0;
     transition: all .5s;
-  }
+}
+
+.header--mostrar {
+    position: fixed !important;
+    top: 0;
+    height: 6rem;
+    transition: all .4s;
+    background-color: var(--color--background);
+    z-index: 9899;
+    border-bottom: 1px solid var(--color--background-second);
+    .header__menu {
+        transition: all .4s;
+    }
+}
 
 //***************************************************//
 
 
 // Escritorios
 @media screen and (min-width: 1024px) {
- .header_mostrar {
-        position: fixed !important;
-        top: 0;
-        height: 7rem !important;
-        transition: all .4s;
-        background-color: var(--color--background);
-        z-index: 9899;
-        border-bottom: 1px solid var(--color--background-second);
-        .header_menu {
-            transition: all .4s;
-        }
-      }
-
-
 
     .header{
-        animation-name: topAnimacion;
-        animation-duration: 1s;
-        height: 7rem;
         align-items: center;
         transition: all .5s;
-        position: relative;
-        &_encabezado{
-            padding-top: 1.5rem;
-            font-weight: 500;
-            font-size: 1.5rem;
-            span{
-                cursor: pointer;
-            }
-            h4{
-                cursor: default;
-            }
+        &__encabezado{
+           width: 40%;
         }
 
-        &_menu{
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            width: 35%;
-            li{
-                cursor: pointer;
-                text-align: center;
+        &__menu{
+            width: 40%;
+            ul li{
                 margin: 0 auto;
-                font-size: 1rem;
-                background-image: linear-gradient(90deg ,var(--color--text--second),var(--color--text--second));
-                background-repeat: no-repeat;
-                background-size: 0% 2px;
-                background-position: center bottom;
-                transition: background-size .4s ease-in-out;
-                // &:hover{
-                //     color: var(--color--text--second);
-                // }
-                &:hover{
-                    background-size: 100% 2px;
-                }
-                &:active{
-                    color: var(--color--text--second);
-                }
             }
         }
     }
@@ -96,64 +105,18 @@
 // telefono
 @media screen and (min-width: 768px) and (max-width: 1190px) {
 
-    .header_mostrar {
-        position: fixed !important;
-        top: 0;
-        height: 7rem !important;
-        transition: all .4s;
-        background-color: var(--color--background);
-        z-index: 9899;
-        border-bottom: 1px solid var(--color--background-second);
-        .header_menu {
-            transition: all .4s;
-        }
-      }
-
-
-
     .header{
-        animation-name: topAnimacion;
-        animation-duration: 1s;
-        height: 7rem;
         align-items: center;
         transition: all .5s;
-        position: relative;
-        &_encabezado{
-            padding-top: 1.5rem;
-            font-weight: 500;
-            font-size: 1.5rem;
-            span{
-                cursor: pointer;
-            }
-            h4{
-                cursor: default;
-            }
+        &__encabezado{
+           width: 50%;
+           font-size: 1.4rem;
         }
 
-        &_menu{
-            display: flex;
-            justify-content: center;
-            list-style: none;
-
-            li{
-                cursor: pointer;
-                text-align: center;
+        &__menu{
+            width: 50%;
+            ul li{
                 margin: 0 auto;
-                font-size: 1rem;
-                background-image: linear-gradient(90deg ,var(--color--text--second),var(--color--text--second));
-                background-repeat: no-repeat;
-                background-size: 0% 2px;
-                background-position: center bottom;
-                transition: background-size .4s ease-in-out;
-                // &:hover{
-                //     color: var(--color--text--second);
-                // }
-                &:hover{
-                    background-size: 100% 2px;
-                }
-                &:active{
-                    color: var(--color--text--second);
-                }
             }
         }
     }
@@ -163,69 +126,37 @@
 
 //movil horizontal
 @media screen and (max-width: 767px) {
-   
-
-    .header_mostrar {
+    .header--mostrar {
         position: fixed !important;
         top: 0;
-        height: 18% !important;
-        transition: all .4s;
-        background-color: var(--color--background);
-        z-index: 9899;
-        border-bottom: 1px solid var(--color--background-second);
-        .header_menu {
-            transition: all .4s;
-            margin-top: -1.8rem !important;
-            li{
-                height: 2rem !important;
+        height: 5rem !important;
+        .header__encabezado{
+            display: none;
+         }
+        .header__menu {
+            width: 100%;
+            margin-top: 0;
+            ul li{
+                margin: 0 auto;
             }
         }
       }
 
     .header{
-        animation-name: topAnimacion;
-        animation-duration: 1s;
-        height: 15%;
+        align-items: center;
         transition: all .5s;
-        position: relative;
-        padding-top: 2rem;
-        &_encabezado{
-            font-weight: 500;
-            font-size: 1.5rem;
-            span{
-                cursor: pointer;
-            }
-            h4{
-                cursor: default;
-                margin-top: .5rem;
-            }
+        height: 10rem;
+        flex-direction: column;
+        &__encabezado{
+           width: 100%;
+           font-size: 1.4rem;
         }
-
-        &_menu{
-            display: flex;
-            justify-content: center;
-            list-style: none;
-
-            li{
-                cursor: pointer;
-                text-align: center;
+        
+        &__menu{
+            margin-top: 2rem;
+            width: 100%;
+            ul li{
                 margin: 0 auto;
-                margin-top: 2rem;
-                font-size: 1rem;
-                background-image: linear-gradient(90deg ,var(--color--text--second),var(--color--text--second));
-                background-repeat: no-repeat;
-                background-size: 0% 2px;
-                background-position: center bottom;
-                transition: background-size .4s ease-in-out;
-                // &:hover{
-                //     color: var(--color--text--second);
-                // }
-                &:hover{
-                    background-size: 100% 2px;
-                }
-                &:active{
-                    color: var(--color--text--second);
-                }
             }
         }
     }
@@ -233,48 +164,55 @@
 
 //movil vertical
 @media (max-width: 480px) { 
-    .header_mostrar {
+    .header--mostrar {
         position: fixed !important;
         top: 0;
-        height: 18% !important;
-        transition: all .4s;
-        background-color: var(--color--background);
-        z-index: 9899;
-        border-bottom: 1px solid var(--color--background-second);
-        .header_encabezado {
-            height: 4rem;
+        height: 5rem !important;
+        .header__encabezado{
+            display: inherit;
+            font-size: 1.2rem;
         }
-        .header_menu {
-            transition: all .4s;
-            margin-top: 0rem !important;
-            li{
-                height: 2rem !important;
+        .header__menu {
+            width: 100%;
+            margin-top: 0;
+            ul li{
+                margin: 0 auto;
             }
         }
       }
 
-
-
-   .header{
-    height: 18rem !important;
-    padding-top: 3.5rem;
-    &_encabezado{
-        height: 2rem;
-    }
-    &_menu{
-        display:block;
-
-        li{
-            margin-top: 1rem;
-            &:hover{
-                background-size: 0%;
+    .header{
+        align-items: center;
+        transition: all .5s;
+        height: 8rem;
+        flex-direction: column;
+        &__encabezado{
+           width: 100%;
+            span{
+                font-size: 1.2rem;
             }
-            &:active{
-                color: var(--color--text--second);
+            h4{
+                font-size: 1rem;
+            }
+        }
+        
+        &__menu{
+            width: 100%;
+            ul{ 
+                flex-direction: column;
+                transition: all .4s;
+                display: none;
+                li{
+                    height: 2rem;
+                    margin: 0 auto;
+                    font-size: 1.1rem;
+                    &:hover{
+                        background-size: 0%;
+                    }
+                }
             }
         }
     }
-   }
 }
 
 
