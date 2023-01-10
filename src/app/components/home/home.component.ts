@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-public MyImg : string = "assets/images/Home_Yo.jpeg"
+//public MyImg : string = "assets/images/Home_Yo.jpeg"
+public MyImg : string = "https://portafolio-andres-m.web.app/assets/images/Home_Yo.jpeg"
 }

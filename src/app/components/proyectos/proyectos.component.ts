@@ -20,8 +20,10 @@ export class ProyectosComponent implements OnInit {
       `Sistema para realizar la facturación eléctronica ante la DIAN,
       cumpliendo con los estandares correspondientes.`
       ,
-      logo: 'assets/images/Proyectos/AutoFactura/AutoFactura.ico',
-      login: 'assets/images/Proyectos/AutoFactura/Login.png',
+      logo: 'https://portafolio-andres-m.web.app/assets/images/Proyectos/AutoFactura/AutoFactura.ico',
+      login: 'https://portafolio-andres-m.web.app/assets/images/Proyectos/AutoFactura/Login.png',
+      //logo: 'assets/images/Proyectos/AutoFactura/AutoFactura.ico',
+      //login: 'assets/images/Proyectos/AutoFactura/Login.png',
     }
     ,
     {
@@ -32,8 +34,8 @@ export class ProyectosComponent implements OnInit {
       `Sistema para realizar los eventos de las facturas electrónicas ante la DIAN,
       para convertirlas en titulo valor.`
       ,
-      logo: 'assets/images/Proyectos/NoIcon.png',
-      login: 'assets/images/Proyectos/EventosDIAN/Principal.png',
+      logo: 'https://portafolio-andres-m.web.app/assets/images/Proyectos/NoIcon.png',
+      login: 'https://portafolio-andres-m.web.app/assets/images/Proyectos/EventosDIAN/Principal.png',
     }
     ,
     {
@@ -44,8 +46,8 @@ export class ProyectosComponent implements OnInit {
       `Sistema permite que clientes de Texaco puedan registrarse a la plataforma de AutoFactura50
       para realizarles su facturación electrónica.`
       ,
-      logo: 'assets/images/Proyectos/Texaco/Texaco.ico',
-      login: 'assets/images/Proyectos/Texaco/Login.png',
+      logo: 'https://portafolio-andres-m.web.app/assets/images/Proyectos/Texaco/Texaco.ico',
+      login: 'https://portafolio-andres-m.web.app/assets/images/Proyectos/Texaco/Login.png',
     }
     ,
     {
@@ -56,8 +58,8 @@ export class ProyectosComponent implements OnInit {
       `Sistema que cumple la funcionalidad de un CRM para controlar la logística interna de la empresa, entre otros factores
       de la misma.`
       ,
-      logo: 'assets/images/Proyectos/Santamaria/Logo.png',
-      login: 'assets/images/Proyectos/Santamaria/Login.png',
+      logo: 'https://portafolio-andres-m.web.app/assets/images/Proyectos/Santamaria/Logo.png',
+      login: 'https://portafolio-andres-m.web.app/assets/images/Proyectos/Santamaria/Login.png',
     }
 
   ]

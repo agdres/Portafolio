@@ -10,7 +10,8 @@ import { Educacion } from 'src/app/models/educacion.model';
 export class CurriculumComponent implements OnInit {
   public ListCurriculum: Experiencia[] = [
     {
-      logo: 'assets/images/Logos/Syscom1.jpg',
+      logo: 'https://portafolio-andres-m.web.app/assets/images/Logos/Syscom1.jpg',
+      //logo: 'assets/images/Logos/Syscom1.jpg',
       empresa: 'SISTEMAS COMERCIALES SYSCOM S.A.',
       detalles:
         [
@@ -34,7 +35,8 @@ export class CurriculumComponent implements OnInit {
 
   public ListEducacion: Educacion[] = [
     {
-      logo: 'assets/images/Logos/SENA.jpg',
+      logo: 'https://portafolio-andres-m.web.app/assets/images/Logos/SENA.jpg',
+      //logo: 'assets/images/Logos/SENA.jpg',
       institucion: 'Servicio Nacional de Aprendizaje (SENA)',
       detalles:
         [
@@ -49,7 +51,8 @@ export class CurriculumComponent implements OnInit {
         ]
     },
     {
-      logo: 'assets/images/Logos/Bachiller.png',
+      //logo: 'assets/images/Logos/Bachiller.png',
+      logo: 'https://portafolio-andres-m.web.app/assets/images/Logos/Bachiller.png',
       institucion: 'COLMERCEDES',
       detalles:
         [
