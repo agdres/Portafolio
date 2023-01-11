@@ -73,7 +73,7 @@ ngOnInit(): void {
 Carousel(){
   var width  = window.innerWidth;
   if (width <= 767) {
-    var Opciones = document.querySelectorAll('.conocimientos_cont_list');
+    var Opciones = document.querySelectorAll('.conocimientos__cont--list');
     Opciones.forEach(x =>{
       x.classList.toggle('list_activo');
       x.classList.toggle('list_inactivo');
