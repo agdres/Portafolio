@@ -12,7 +12,7 @@ import { MaterialModule } from './core/material.core';
   declarations: [
     AppComponent,
     FooterComponent,
-    HeaderComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
