@@ -1,63 +1,73 @@
 //************** Generales *******************
 .home {
     width: 100%;
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
-}
+    position: relative;
+    height: 80vh;
+    &__block {
+        width: 70%;
+        display: inherit;
+        text-align: center;
+        justify-content: center;
+        &--img{
+            img {
+                border-radius: 50%;
+                width: 70%;
+                height: 70%;
+                animation-name: bottAnimacion;
+                animation-duration: 1.5s;
+            }
+        }
 
+        &--presentacion {
+            font-family: var(--font--family);
+            animation-name: bottAnimacion;
+            animation-duration: 1.8s;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-self: center;
+            position: relative;
+            h4 {
+                font-weight: 500;
+                letter-spacing: .2rem;
+            }
+
+            p {
+                margin: 0 auto;
+                text-align: justify;
+            }
+        }
+    }
+}
 //********************************************
 
 
 // Escritorios
 @media screen and (min-width: 1024px) {
-   .home {
-        height: 76vh;
-        &_block {
-            position: relative;
-            width: 70%;
-            display: flex;
-            text-align: center;
-            justify-content: center;
-            &_img{
+    .home {
+        &__block {
+            width: 80%;
+            &--img{
                 width: 50%;
-                img {
-                    border-radius: 50%;
-                    width: 100%;
-                    height: 100%;
-                    animation-name: bottAnimacion;
-                    animation-duration: 1.5s;
-                }
+                height: 50%;
             }
-
-            &_presentacion {
-                width: 70%;
-                font-family: var(--font--family);
-                animation-name: bottAnimacion;
-                animation-duration: 1.8s;
-                display: flex;
-                flex-direction: column;
-                align-self: center;
-                position: relative;
+    
+            &--presentacion {
+                width: 50%;
                 h4 {
-                    font-size: 3rem;
-                    width: 100%;
-                    font-weight: 500;
-                    letter-spacing: .2rem;
-                    height: 3.5rem;
-                    // margin-top: -5rem;
+                    font-size: calc(2.5rem - 10%);
+                    margin-bottom: 3rem;
                 }
-
+    
                 p {
-                    width: 75%;
-                    margin: 0 auto;
-                    text-align: justify;
                     font-size: 1.2rem;
-                    
                 }
             }
         }
-
     }
 
 }
@@ -65,111 +75,102 @@
 // telefono
 @media screen and (min-width: 768px) and (max-width: 1190px) {
     .home {
-        height: 75vh;
-        &_block {
-            position: relative;
+        &__block {
             width: 80%;
-            display: flex;
-            text-align: center;
-            justify-content: center;
-            &_img{
-                width: 60%;
+            &--img{
+                width: 50%;
+                height: 50%;
                 img {
-                    border-radius: 50%;
-                    width: 100%;
-                    height: 100%;
-                    animation-name: bottAnimacion;
-                    animation-duration: 1.5s;
+                    width: 80%;
+                    height: 80%;
                 }
             }
-
-            &_presentacion {
-                width: 70%;
-                font-family: var(--font--family);
-                animation-name: bottAnimacion;
-                animation-duration: 1.8s;
-
-                display: flex;
-                flex-direction: column;
-                align-self: center;
-                position: relative;
+    
+            &--presentacion {
+                width: 50%;
                 h4 {
-                    font-size: 2rem;
-                    font-weight: 500;
-                    letter-spacing: .2rem;
-                    height: 2rem;
+                    font-size: calc(2rem - 10%);
+                    width: 100%;
+                    margin-bottom: 2rem;
                 }
-
+    
                 p {
-                    width: 80%;
-                    margin: 0 auto;
-                    text-align: justify;
                     font-size: 1rem;
                 }
             }
         }
-
     }
-
-
 }
 
 
 //movil horizontal
 @media screen and (max-width: 767px) {
     .home {
-        height: 72vh;
-        &_block {
+        height: 71vh;
+        &__block {
             width: 80%;
-            text-align: center;
-
-            img {
-                border-radius: 50%;
-                width: 300px;
-                height: 300px;
-                animation-name: bottAnimacion;
-                animation-duration: 1.5s;
-            }
-
-            &_presentacion {
-                margin-top: 2rem;
-                font-family: var(--font--family);
-                animation-name: bottAnimacion;
-                animation-duration: 1.8s;
-                h4 {
-                    font-size: 1.6rem;
-                    font-weight: 500;
-                    letter-spacing: .2rem;
+            flex-direction: column;
+            &--img{
+                margin: 0 auto;
+                margin-top: -4rem;
+                width: 80%;
+                height: 80%;
+                img {
+                    width: 70%;
+                    height: 70%;
                 }
-
+            }
+    
+            &--presentacion {
+                margin-top: 2rem;
+                width: 80%;
+                h4 {
+                    font-size: calc(2rem - 10%);
+                    width: 100%;
+                    margin-bottom: 2rem;
+                }
+    
                 p {
-                    width: 80%;
-                    margin: 0 auto;
-                    text-align: justify;
-                    font-size: .9rem;
+                    font-size: 1rem;
                 }
             }
         }
-
     }
 }
 
 //movil vertical
 @media (max-width: 480px) {
     .home {
-        height: 65vh;
-        margin-bottom: 2rem;
-
-        &_block {
-            width: 100%;
-            text-align: center;
-            img {
-                width: 70%;
-                height: 70%;
+        height: 71vh;
+        &__block {
+            width: 90%;
+            flex-direction: column;
+            &--img{
+                margin: 0 auto;
+                margin-top: -4rem;
+                width: 90%;
+                height: 80%;
+                img {
+                    width: 70%;
+                    height: 70%;
+                }
+            }
+    
+            &--presentacion {
+                margin-top: 2rem;
+                width: 90%;
+                h4 {
+                    font-size: calc(1.8rem - 10%);
+                    width: 100%;
+                    margin-bottom: 1.6rem;
+                }
+    
+                p {
+                    font-size: 0.9rem;
+                }
             }
         }
     }
-
 }
 
 
