@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Informacion } from 'src/app/models/proyectos.model';
 
 @Component({
   selector: 'app-proyectos-modal',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./proyectos-modal.component.scss']
 })
 export class ProyectosModalComponent {
-
+  @Input() Info !: Informacion;
 }

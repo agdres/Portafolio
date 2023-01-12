@@ -106,15 +106,14 @@
 //movil horizontal
 @media screen and (max-width: 767px) {
     .home {
-        height: 71vh;
         &__block {
             width: 80%;
             flex-direction: column;
             &--img{
                 margin: 0 auto;
                 margin-top: -4rem;
-                width: 80%;
-                height: 80%;
+                width: 75%;
+                height: 75%;
                 img {
                     width: 70%;
                     height: 70%;

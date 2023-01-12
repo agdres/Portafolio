@@ -1,0 +1,112 @@
+
+.title{
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    img{
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-right: .5rem;
+        border-radius: 50%;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+        object-fit: scale-down;
+    }
+    h2{
+        font-family: var(--font--family);
+        margin-left: 1rem !important;
+    }
+}
+
+.dialog{
+    &__cont{
+        font-family: var(--font--family);
+        h3{
+            font-size: 1.3rem;
+            font-weight: 500;
+        }
+        h4{
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        p{
+            text-align: justify;
+        }
+    }
+}
+
+// .md-dialog-container{
+//     width: 50% !important;
+// }
+// Escritorios
+@media screen and (min-width: 1024px) {
+
+   
+}
+
+// telefono
+@media screen and (min-width: 768px) and (max-width: 1190px) {}
+
+
+//movil horizontal
+@media screen and (max-width: 767px) {
+    .title{
+
+        img{
+            width: 2rem;
+            height: 2rem;
+        }
+        h2{
+        }
+    }
+    
+    .dialog{
+        &__cont{
+            h3{
+                font-size: 1.2rem;
+                font-weight: 500;
+            }
+            h4{
+                font-size: 1.1rem;
+                font-weight: 500;
+            }
+            p{
+                text-align: justify;
+            }
+        }
+    }
+
+}
+
+//movil vertical
+@media (max-width: 480px) {
+    .title{
+        height: 6rem;
+        margin-top: 0;
+        flex-direction: column;
+        text-align: center;
+        img{
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+        h2{
+            font-size:  .8rem !important;
+            margin-left: 0rem !important;
+        }
+    }
+    
+    .dialog{
+        &__cont{
+            h3{
+                font-size: 1rem;
+            }
+            h4{
+                font-size: .9rem;
+                font-weight: 500;
+            }
+            p{
+                text-align: justify;
+                font-size: .9rem;
+            }
+        }
+    }
+}
