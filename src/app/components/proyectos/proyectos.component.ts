@@ -117,7 +117,7 @@ ngOnInit(): void {
   this.ListProyectos.reverse();
   setInterval(()=>{
   this.Carousel()
-  },8000);
+  },6000);
 }
 
 Carousel(){
